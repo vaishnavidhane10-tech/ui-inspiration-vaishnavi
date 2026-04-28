@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UI Inspiration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- AUTH BUTTONS -->
+    <div class="auth-buttons">
+        <button onclick="openAuth('login')">Login</button>
+        <button onclick="openAuth('signup')">Sign Up</button>
+    </div>
+
+    <h1>UI Inspiration 💡</h1>
+    <p>Discover UI design ideas for popular apps and get inspiration for your own projects</p>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4">
+            <h2>🎬 Netflix UI</h2>
+            <p>Clean dark theme with smooth layout</p>
+            <button onclick="showMessage('Netflix UI'); openModal('Netflix UI','Netflix uses dark theme')">
+                View Design
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+            <h2>🍔 Food App UI</h2>
+            <p>Colorful and easy ordering experience</p>
+            <button onclick="showMessage('Food App UI'); openModal('Food App UI','Food apps use bright colors')">
+                View Design
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+            <h2>🛍️ Shopping UI</h2>
+            <p>Simple product layout and filters</p>
+            <button onclick="showMessage('Shopping UI'); openModal('Shopping UI','Shopping apps use filters')">
+                View Design
+            </button>
+        </div>
+
+    </div>
+
+    <footer>✨ Created by Vaishnavi 💖</footer>
+
+    <!-- MAIN MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-box">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-img">
+            <h2 id="modal-title"></h2>
+            <p id="modal-text"></p>
+            <button id="modal-btn">Open Full Design</button>
+        </div>
+    </div>
+
+    <!-- AUTH MODAL -->
+    <div id="authModal" class="modal">
+        <div class="modal-box">
+            <span class="close" onclick="closeAuth()">&times;</span>
+            <h2 id="auth-title">Login</h2>
+            <input type="text" id="username" placeholder="Username" class="input">
+            <input type="password" id="password" placeholder="Password" class="input">
+            <button onclick="submitAuth()">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
